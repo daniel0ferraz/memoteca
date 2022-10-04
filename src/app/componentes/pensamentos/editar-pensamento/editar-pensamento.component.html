@@ -1,11 +1,7 @@
-<section class="container criar-pensamentos ff-inter">
+<section class="container editar-pensamentos ff-inter">
   <header class="header">
-    <h2>
-      Adicione um <br />
-      pensamento novo:
-    </h2>
+    <h2>Adicione um <br />pensamento novo:</h2>
   </header>
-
   <form>
     <label for="pensamento">Pensamento</label>
     <input
@@ -16,7 +12,6 @@
       placeholder="Digite o pensamento"
       [(ngModel)]="pensamento.conteudo"
     />
-
     <label for="autoria">Autoria ou fonte</label>
     <input
       type="text"
@@ -26,7 +21,6 @@
       placeholder="Digite a autoria ou fonte"
       [(ngModel)]="pensamento.autoria"
     />
-
     <label for="modelo">Selecione o modelo do card:</label>
     <div class="container-radio">
       <div class="radio-modelo">
@@ -43,7 +37,7 @@
           </div>
           <span>Modelo 1</span>
         </label>
-
+        Prévia:
         <div class="modelo modelo1 ff-roboto-mono">
           <img src="../../../../assets/modelo1.png" alt="Aspas azuis" />
           <p class="conteudo">{{ pensamento.conteudo }}</p>
@@ -52,6 +46,7 @@
           </p>
         </div>
       </div>
+
       <div class="radio-modelo">
         <label for="modelo2">
           <input
@@ -66,15 +61,16 @@
           </div>
           <span>Modelo 2</span>
         </label>
-
+        Prévia:
         <div class="modelo modelo2 ff-roboto-mono">
-          <img src="../../../../assets/modelo2.png" alt="Aspas azuis" />
+          <img src="../../../../assets/modelo2.png" alt="Aspas azul claro" />
           <p class="conteudo">{{ pensamento.conteudo }}</p>
           <p class="autoria">
             <b>{{ pensamento.autoria }}</b>
           </p>
         </div>
       </div>
+
       <div class="radio-modelo">
         <label for="modelo3">
           <input
@@ -89,9 +85,9 @@
           </div>
           <span>Modelo 3</span>
         </label>
-
+        Prévia:
         <div class="modelo modelo3 ff-roboto-mono">
-          <img src="../../../../assets/modelo3.png" alt="Aspas azuis" />
+          <img src="../../../../assets/modelo3.png" alt="Aspas verdes" />
           <p class="conteudo">{{ pensamento.conteudo }}</p>
           <p class="autoria">
             <b>{{ pensamento.autoria }}</b>
@@ -99,10 +95,9 @@
         </div>
       </div>
     </div>
-
     <div class="acoes">
-      <button class="botao" (click)="criarPensamento()">Salvar</button>
-      <button class="botao" (click)="cancelar()">Cancelar</button>
+      <button (click)="editarPensamento()" class="botao">Salvar</button>
+      <button (click)="cancelar()" class="botao">Cancelar</button>
     </div>
   </form>
 </section>
